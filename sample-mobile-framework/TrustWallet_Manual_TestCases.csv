@@ -1,0 +1,30 @@
+ID,Title,Steps,Expected Result,Module
+TC_CW_001,Verify Create Wallet button visible,"1. Launch app
+2. Observe 'Create New Wallet' button","Button is visible on onboarding screen",Create Wallet
+TC_CW_002,Verify tap on Create Wallet navigates to passcode screen,"1. Tap 'Create New Wallet'", "Passcode creation screen is displayed",Create Wallet
+TC_CW_003,Verify entering 6-digit passcode,"1. Enter 1 six times", "Navigates to Confirm Passcode screen",Create Wallet
+TC_CW_004,Verify confirming passcode with same 6 digits,"1. Enter 1 six times", "Navigates to next screen",Create Wallet
+TC_CW_005,Verify error on mismatched confirm passcode,"1. Enter '111111'
+2. Enter '123456'", "Error message appears",Create Wallet
+TC_CW_006,Verify skip enable notification button,"1. On notifications screen tap 'Skip, I’ll do it later'", "Navigates to next screen",Create Wallet
+TC_CW_007,Verify wallet is ready screen,"1. Complete steps up to final screen", "'Wallet is Ready' screen appears",Create Wallet
+TC_CW_008,Verify tapping 'Skip' on wallet ready screen navigates home,"1. Tap 'Skip'", "Navigates to Home screen",Create Wallet
+TC_CW_009,Verify home screen components visible,"1. Observe Home screen", "Components like balance, tokens are visible",Home Screen
+TC_CW_010,Verify app retains login after relaunch,"1. Close app
+2. Relaunch app", "User lands on Home screen",Home Screen
+TC_CW_011,Verify user can scroll in token list,"1. Scroll token list", "List scrolls smoothly",Home Screen
+TC_CW_012,Verify search functionality for tokens,"1. Tap search
+2. Enter token name", "Matching tokens are listed",Home Screen
+TC_CW_013,Verify toggle between light/dark mode,"1. Open settings
+2. Change theme", "Theme is applied correctly",Settings
+TC_CW_014,Verify About section in settings,"1. Go to Settings
+2. Tap 'About'", "'About' screen is shown",Settings
+TC_CW_015,Verify Secure Flag on passcode screen,"1. Try screenshot on passcode screen", "Screenshot fails due to FLAG_SECURE",Security
+TC_CW_016,Verify version number in About screen,"1. Open About section", "Correct app version is shown",Settings
+TC_CW_017,Verify copy wallet address functionality,"1. Tap wallet address
+2. Tap copy", "Address copied to clipboard",Wallet
+TC_CW_018,Verify QR code displays wallet address,"1. Tap receive
+2. View QR", "Correct address QR is shown",Wallet
+TC_CW_019,Verify app responds to network loss,"1. Turn off network
+2. Navigate", "Error shown or offline state handled",Connectivity
+TC_CW_020,Verify re-enabling network resumes app,"1. Turn on network again", "App resumes functionality",Connectivity
