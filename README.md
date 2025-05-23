@@ -50,14 +50,14 @@ public void setUp() {
     DriverManager.initializeDriver();
 }
 
-🧪 TestNG Groups + Retry
+🧪 **TestNG Groups + Retry**
 
 @Test(groups = {"onboarding"})
 public void testCreateWallet() { ... }
 
-testng.xml:
+**testng.xml:**
 
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+**<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Trust wallet Test Suite" parallel="classes" thread-count="2">
     <listeners>
         <listener class-name="listeners.RetryListener"/>
@@ -72,9 +72,9 @@ testng.xml:
             <class name="tests.TrustWalletOnboardingTest"/>
         </classes>
     </test>
-</suite>
+</suite>**
 
-📸 Screenshots in Extent Reports
+📸 **Screenshots in Extent Reports**
 
 public static String captureScreenshot(WebDriver driver, String name) {
     TakesScreenshot ts = (TakesScreenshot) driver;
@@ -84,21 +84,19 @@ public static String captureScreenshot(WebDriver driver, String name) {
     return path;
 }
 
-test.fail("Step failed",
-    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 
-📊 Logging in ExtentReports
+📊 **Logging in ExtentReports**
 
 ExtentTest test = ExtentManager.createTest("Verify Trending Page");
 test.info("Launching app");
 test.pass("Successfully navigated");
 test.fail("Something went wrong");
 
-🏁 Running the Tests
+🏁 **Running the Tests**
 
-./gradlew clean test
+**./gradlew clean test**
 
-Or run via IntelliJ by right-clicking testng.xml.
+**Or run via IntelliJ by right-clicking testng.xml.**
 
 🧰 Troubleshooting
 
