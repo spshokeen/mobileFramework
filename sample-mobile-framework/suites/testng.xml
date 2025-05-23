@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Trust wallet Test Suite" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="listeners.RetryListener"/>
+    </listeners>
+    <test name="Trust Wallet Onboarding Test">
+        <groups>
+            <run>
+                <include name="onboarding"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.TrustWalletOnboardingTest"/>
+        </classes>
+    </test>
+</suite>

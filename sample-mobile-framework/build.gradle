@@ -1,0 +1,27 @@
+plugins {
+    id("java")
+}
+
+group = "com.trustWallet"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.25.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+    implementation 'org.testng:testng:7.5'
+    implementation 'com.aventstack:extentreports:5.1.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation group: 'io.appium', name: 'java-client', version: '9.2.2'
+
+}
+
+test {
+    useTestNG() {
+        suites 'suites/testng.xml'
+    }
+}
