@@ -12,21 +12,15 @@ This project automates the onboarding flow of the Trust Wallet app using Appium,
 - Reporting: ExtentReports
 - Design Pattern: Page Object Model (POM)
 
-🚀 Project Structure
+🚀 **Project Structure**
 
-src/
-  ├── main/
-  │   └── java/
-  │       └── pages/                   # All page classes (e.g. OnboardingPage, HomePage)
-  ├── test/
-  │   └── java/
-  │       └── tests/                   # All test classes (e.g. TrustWalletOnboardingTest)
-  │       └── listeners/              # RetryListener etc.
-resources/
-  └── apps/trustWallet.apk            # App under test
-testng.xml                            # TestNG suite file
+<img width="859" alt="Screenshot 2025-05-23 at 10 32 15 PM" src="https://github.com/user-attachments/assets/0c649c1b-8d35-4f8d-913b-be1ed4e158b0" />
 
-🔧 Appium Driver Initialization
+
+
+   
+
+🔧 **Appium Driver Initialization**
 
 public static void initializeDriver() {
     DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -43,36 +37,15 @@ public static void initializeDriver() {
 }
 
 
-✅ Sample @BeforeMethod
-
-@BeforeMethod(alwaysRun = true)
-public void setUp() {
-    DriverManager.initializeDriver();
-}
-
 🧪 **TestNG Groups + Retry**
 
 @Test(groups = {"onboarding"})
 public void testCreateWallet() { ... }
 
 **testng.xml:**
+<img width="674" alt="Screenshot 2025-05-23 at 10 33 25 PM" src="https://github.com/user-attachments/assets/c03135af-1b89-40d9-a40b-510bd4fb3a5e" />
 
-**<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Trust wallet Test Suite" parallel="classes" thread-count="2">
-    <listeners>
-        <listener class-name="listeners.RetryListener"/>
-    </listeners>
-    <test name="Trust Wallet Onboarding Test">
-        <groups>
-            <run>
-                <include name="onboarding"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="tests.TrustWalletOnboardingTest"/>
-        </classes>
-    </test>
-</suite>**
+
 
 📸 **Screenshots in Extent Reports**
 
