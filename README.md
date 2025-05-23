@@ -1,9 +1,9 @@
 
-📱 Trust Wallet Automation Framework
+📱 **Trust Wallet Automation Framework**
 
 This project automates the onboarding flow of the Trust Wallet app using Appium, Java, TestNG, and Gradle with rich reporting via ExtentReports.
 
-📦 Project Tech Stack
+📦 **Project Tech Stack**
 
 - Language: Java
 - Automation Tool: Appium (UIAutomator2)
